@@ -20,7 +20,7 @@ def test(n):
 
 
 result = None
-for n in range(m+1, 1000000000):
+for n in range(m+1 , 1000000000):
     # print(n)
     n = [int(x) for x in str(n)]
     if sum(n) % len(n) == 0:
