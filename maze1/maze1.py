@@ -46,6 +46,7 @@ for i in range(h):
                     node.cost = 0
                     exits.append(node)
                     print(f"exit: {i} {j}")
+
                     nodes[i][j].neighbors.append(node)
 
 iterations = 0
