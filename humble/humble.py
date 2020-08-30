@@ -4,11 +4,8 @@ LANG: PYTHON3
 TASK: humble
 """
 
-
-
-
-
 import time
+import numpy as np
 start = time.time()
 
 with open("humble.in", "r") as f:
@@ -18,6 +15,12 @@ with open("humble.in", "r") as f:
 
 pindex = [0 for i in range(k)]
 humble = [0 for i in range(n+1)]
+
+# pindex = np.zeros(k, dtype=int)
+# humble = np.zeros(n+1, dtype=int)
+# print(pindex)
+# print(humble)
+
 nhum = 0
 humble[nhum] = 1
 nhum += 1
@@ -29,6 +32,7 @@ while nhum < n+1:
         # print("->", pindex[i])
         # print(i)
         # print(s[i], humble[pindex[i]], humble[nhum-1])
+
         while s[i] * humble[pindex[i]] <= humble[nhum-1]:
             pindex[i] += 1
         # print("<-", pindex[i])
@@ -43,6 +47,8 @@ while nhum < n+1:
     # print("MIN", minimum)
 print(len(humble))
 print(humble[n])
+
+
 
 # humble = SortedSet([1])
 # print(n)
