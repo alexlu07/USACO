@@ -60,7 +60,9 @@ public class shopping {
             }
         }
         int[] prices = new int[size];
-
+        for (int i = 0; i < size; i++) {
+            
+        }
         // System.out.println(Arrays.deepToString(offers));
         // System.out.println(Arrays.deepToString(products));
         // ArrayList<String> offersString = new ArrayList<String>();
@@ -94,6 +96,10 @@ public class shopping {
     }
 
     public int toIndex(int[] values, int[] multiplier) {
-        
+        int result = 0;
+        for (int i = 0; i < values.length; i++) {
+            result += values[i] * multiplier[i];
+        }
+        return result;
     }
 }
