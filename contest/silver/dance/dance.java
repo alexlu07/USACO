@@ -47,7 +47,7 @@ public class dance {
             p.add(i);
             int pos = i;
             int first = 1;
-            ArrayList<Integer> neighbors = new ArrayList<Integer>();
+            ArraysrayList<Integer> neighbors = new ArrayList<Integer>();
             // System.out.println("-------" + i + "------------");
             while (first == 1 || pos != i) {
                 first = 0;
