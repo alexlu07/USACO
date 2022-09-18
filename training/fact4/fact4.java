@@ -13,6 +13,8 @@ class fact4 {
         int n = Integer.parseInt(st.nextToken());
         System.out.println(n);
 
+        fin.close();
+
         int twos = 0;
         int fives = 0;
         int result = 1;

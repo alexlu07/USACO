@@ -54,6 +54,8 @@ class kimbits {
         int nones = Integer.parseInt(st.nextToken());
         long index = Long.parseLong(st.nextToken());
 
+        fin.close();
+
         initSizeOfSet();
         PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("kimbits.out")));
         printbits(nbits, nones, index-1, fout);

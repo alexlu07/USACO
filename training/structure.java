@@ -1,18 +1,20 @@
 /*
 ID: alexlu.1
 LANG: JAVA
-TASK: XXX
+TASK: structure
 */
 import java.io.*;
 import java.util.*;
 
-public class XXX {
+public class structure {
     public static void main(String args[]) throws IOException {
-        BufferedReader fin = new BufferedReader(new FileReader("XXX.in"));
+        BufferedReader fin = new BufferedReader(new FileReader("structure.in"));
         StringTokenizer st = new StringTokenizer(fin.readLine());
         int n = Integer.parseInt(st.nextToken());
+        System.out.println(n);
+        fin.close();
 
-        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("XXX.out")));
+        PrintWriter fout = new PrintWriter(new BufferedWriter(new FileWriter("structure.out")));
         fout.println();
         fout.close();
     }

@@ -6,10 +6,10 @@ TASK: fence
 import java.io.*;
 import java.util.*;
 
-class NodeComparator implements Comparator {
+class NodeComparator implements Comparator<Node> {
 
-    public int compare(Object a, Object b) {
-        return ((Node) a).id - ((Node) b).id;
+    public int compare(Node a, Node b) {
+        return a.id - b.id;
     }
 }
 
@@ -91,6 +91,8 @@ public class fence {
             n[x] += 1;
             n[y] += 1;
         }
+
+        fin.close();
 
         // System.out.println(Arrays.toString(neighbors[7]));
         Node start = null;

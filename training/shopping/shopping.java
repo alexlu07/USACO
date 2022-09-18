@@ -53,6 +53,9 @@ public class shopping {
                 offers[j][b] = offers_raw[j][11];
             }
         }
+
+        fin.close();
+
         // System.out.println(Arrays.deepToString(products));
         int[] multiplier = new int[b];
         Arrays.fill(multiplier, 1);
@@ -61,7 +64,6 @@ public class shopping {
         }
         int[] prices = new int[size];
         for (int i = 0; i < size; i++) {
-<<<<<<< HEAD
             int r = i;
             for (int j = 0; j < b; j++) {
                 // if (i == size-1) {
@@ -101,10 +103,6 @@ public class shopping {
         // System.out.println(prices[1*1296 + 0*216 + 0*36 + 0*6 + 0*1]);
         // System.out.println(prices[1296]);
         // System.out.println(Arrays.toString(multiplier));
-=======
-            
-        }
->>>>>>> befa172a94609829087bb9a13a7a10b3be4bf2f7
         // System.out.println(Arrays.deepToString(offers));
         // System.out.println(Arrays.deepToString(products));
 
@@ -113,7 +111,6 @@ public class shopping {
         fout.close();
     }
 
-<<<<<<< HEAD
     public static int addIndex(int[] dimensions, int[] values, int[] offer, int[] multiplier) {
         // System.out.println(Arrays.toString(dimensions));
         // System.out.println(Arrays.toString(values));
@@ -126,12 +123,6 @@ public class shopping {
                 return -1;
             }
             result += x * multiplier[i];
-=======
-    public int toIndex(int[] values, int[] multiplier) {
-        int result = 0;
-        for (int i = 0; i < values.length; i++) {
-            result += values[i] * multiplier[i];
->>>>>>> befa172a94609829087bb9a13a7a10b3be4bf2f7
         }
         return result;
     }

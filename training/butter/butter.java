@@ -54,6 +54,8 @@ public class butter {
 
         }
 
+        fin.close();
+
         int[][] distance = new int[n][p];
 
         for (int cow = 0; cow < n; cow++) {

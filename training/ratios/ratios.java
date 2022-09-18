@@ -32,6 +32,8 @@ public class ratios {
 
         }
 
+        fin.close();
+
         int resultSum = 301;
         int[] result = new int[3];
         double m = 0;

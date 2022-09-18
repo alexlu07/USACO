@@ -51,6 +51,8 @@ public class spin {
             wheels[wheel] = w;
         }
 
+        fin.close();
+
         int t = 0;
         time:
         for (; t < 360; t++) {

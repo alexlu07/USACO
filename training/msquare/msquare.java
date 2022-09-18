@@ -56,6 +56,8 @@ public class msquare {
             goal += Integer.parseInt(st.nextToken());
         }
 
+        fin.close();
+
         String result;
 
         TreeSet<Integer> explored = new TreeSet<Integer>();
