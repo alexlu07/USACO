@@ -1,0 +1,53 @@
+#include <iostream>
+#include <limits>
+#include <queue>
+#include <vector>
+#include <tuple>
+
+using namespace std;
+
+int main() {
+    
+    int n, m;
+    cin >> n >> m;
+
+    vector<vector<tuple<int, int, int>>> edges(n);
+
+    for (int i = 0; i < m; ++i) {
+        int a, b, l, s;
+        cin >> a >> b >> l >> s;
+        
+        edges[a-1].push_back({b-1, s, l});
+        edges[b-1].push_back({a-1, s, l});
+
+    }
+
+    vector<int> sizes(n, -1);
+    vector<long long> dists(n, numeric_limits<long long>::min());
+    vector<bool> visited(n);
+
+    priority_queue<tuple<int, long long, int>> heap; // size, -length, node
+    heap.push({numeric_limits<int>::max(), 0, 0});
+    
+    while (!heap.empty()) {
+        auto [s, l, i] = heap.top();
+        heap.pop();
+
+        if (visited[i]) continue;
+        visited[i] = true;
+
+        for (auto [j, ds, dl] : edges[i]) {
+            if (visited[j]) continue;
+            int newS = min(s, ds);
+            long long newD = l - dl;
+            if (newS > sizes[j] || newS == sizes[j] && newD > dists[j]) {
+                sizes[j] = newS;
+                dists[j] = newD;
+                heap.push({newS, newD, j});
+            }
+        }
+    }
+
+    cout << sizes[n-1] << " " << -dists[n-1] << endl;
+
+}
